@@ -66,11 +66,11 @@
         <ul class="sticky">
             <li>
             <i class="bi bi-github"></i>
-                <a href="https://github.com/Spatriciopk/Prueba" target="_blank">Repository<br>Project </a> 
+                <a href="https://github.com/Freddy8-C/MachineLearning_Proyecto" target="_blank">Repository<br>Project </a> 
             </li>
             <li>
             <i class="bi bi-git"></i>
-               <a href="https://github.com/Freddy8-C/Proyecto_MachineLearning" target="_blank">Repository<br>CSV </a>
+               <a href="https://github.com/Freddy8-C/Proyecto_MachineLearning2" target="_blank">Repository<br>CSV </a>
             </li>
 
             <li>

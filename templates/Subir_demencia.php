@@ -83,6 +83,45 @@
 
 
 
+
+
+
+    <div class="sticky-container">
+        <ul class="sticky">
+        <li>
+            <i class="bi bi-github"></i>
+                <a href="https://github.com/Freddy8-C/MachineLearning_Proyecto" target="_blank">Repository<br>Project </a> 
+            </li>
+            <li>
+            <i class="bi bi-git"></i>
+               <a href="https://github.com/Freddy8-C/Proyecto_MachineLearning2" target="_blank">Repository<br>CSV </a>
+            </li>
+
+            <li>
+            <i class="bi bi-globe"></i>
+                <a href="https://machinlearning2.herokuapp.com/" target="_blank">Website<br>Machine Learning</a>
+            </li> 
+
+            <li>
+                <img src="{{ url_for('static', filename='img/Flask.png')}}" width="25" height="25">
+                <a href="https://flask.palletsprojects.com/en/2.1.x/installation/" target="_blank">Website<br>Flask</a>
+            </li>
+
+            <li>
+                <img src="{{ url_for('static', filename='img/Heroku.png')}}" width="25" height="25">
+                <a href="https://www.heroku.com/" target="_blank">Website<br>Heroku</a>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='img/VisualSC.png')}}" width="25" height="25">
+                <a href="https://code.visualstudio.com/" target="_blank"> Visual<br>Studio Code</a>
+            </li>
+        </ul>
+    </div> 
+
+
+
+
+
 </body>
 
 
