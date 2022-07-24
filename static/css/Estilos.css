@@ -79,7 +79,7 @@ h1, h2{
 
 .card1 { 
   width: 35%;
-  height: 20vw; 
+  height: 70%; 
   text-align: center;  
   box-shadow: 1px 1px 1px 1px black;
   background-color:white;
@@ -87,15 +87,15 @@ h1, h2{
 }
 .card2 { 
   width: 35%;
-  height: 20vw; 
+  height: 70%; 
   text-align: center;  
   box-shadow: 1px 1px 1px 1px black;
   background-color:white;
   color: black;
 }
 .card3 { 
-  width: 20%;
-  height: 15vw; 
+  width: 40%;
+  height: 15%; 
   text-align: center; 
   box-shadow: 1px 1px 1px 1px black;
   background-color:white;

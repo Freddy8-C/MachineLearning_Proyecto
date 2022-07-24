@@ -41,7 +41,9 @@
         <div class="cards">
             <div class="card3"> 
             Requirements to upload the dataset, which must take into account that it contains 
-            the fields: Definition, Source (book or article where the definition was obtained), 
+            the fields:
+            <br>
+            Definition, Source (book or article where the definition was obtained), 
             Publisher, Approach (Biomedical, Psychosocial-Community or Daily).
             </div> 
         </div>
