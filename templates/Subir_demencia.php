@@ -15,75 +15,48 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Estilo_botones.css')}}">
     <!-- SCRIPT -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
-    
-    <div class="logo">
-    <img src="{{ url_for('static', filename='img/Logo.png' ) }}" alt="Logo Machine Learning" />
-    </div>
-    
-    <title>Schedule</title>
-
+    <title>UPLOAD</title> 
 </head>
+    <nav class="navbar navbar-expand-lg navbar-Info bg-color">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="{{ url_for('principal')}}">INDEX</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavInfoDropdown" aria-controls="navbarNavInfoDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavInfoDropdown">
+                <ul class="navbar-nav">
+                    <a class="navbar-brand" href="{{ url_for('principal')}}">HOME</a> 
+                    <a class="navbar-brand" href="{{ url_for('consulta')}}" >QUERY </a> 
+                    <a class="navbar-brand" href="{{ url_for('subir_demencia')}}">SUBIR DEMENCIA</a> 
+                </ul>
+            </div>
+        </div>
+    </nav>
+
 <body>
- <nav class="navbar navbar-expand-lg navbar-Info bg-color">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="{{ url_for('principal')}}">INDEX</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavInfoDropdown" aria-controls="navbarNavInfoDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavInfoDropdown">
-        <ul class="navbar-nav"> 
-            <a class="navbar-brand" href="{{ url_for('consulta')}}" >CONSULTA </a> 
-                <a class="navbar-brand" href="{{ url_for('subir_demencia')}}">SUBIR DEMENCIA</a> 
-        </ul>
+    <h1>UPLOAD</h1>
+
+
+    <div> 
+        <div class="cards">
+            <div class="card3"> 
+            Requirements to upload the dataset, which must take into account that it contains 
+            the fields: Definition, Source (book or article where the definition was obtained), 
+            Publisher, Approach (Biomedical, Psychosocial-Community or Daily).
+            </div> 
         </div>
     </div>
-</nav>
-
-
-
-
+<br>
     <form action="/upload" method="POST" enctype="multipart/form-data" style="text-align: center"> 
      
- <input class="form-control" id="upfile" type="file" name="upfile" accept=".csv" />
- 
-<input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="Send" />
-
-</form>
+        <input class="form-control" id="upfile" type="file" name="upfile" accept=".csv" /> 
+        <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="Send" />
+    </form>
 <br> 
-<form action="/quitar" method="POST"  style="text-align: center" > 
-<input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="Delete" />
-</form>
-    <!-- <div class="sticky-container">
-        <ul class="sticky">
-            <li>
-            <i class="bi bi-github"></i>
-                <a href="https://github.com/Spatriciopk/Prueba" target="_blank">Repository<br>Project </a> 
-            </li>
-            <li>
-            <i class="bi bi-git"></i>
-               <a href="https://github.com/Freddy8-C/Proyecto_MachineLearning" target="_blank">Repository<br>CSV </a>
-            </li>
-
-            <li>
-            <i class="bi bi-globe"></i>
-                <a href="https://machinlearning2.herokuapp.com/" target="_blank">Website<br>Machine Learning</a>
-            </li> 
-
-            <li>
-                <img src="{{ url_for('static', filename='img/Flask.png')}}" width="25" height="25">
-                <a href="https://flask.palletsprojects.com/en/2.1.x/installation/" target="_blank">Website<br>Flask</a>
-            </li>
-
-            <li>
-                <img src="{{ url_for('static', filename='img/Heroku.png')}}" width="25" height="25">
-                <a href="https://www.heroku.com/" target="_blank">Website<br>Heroku</a>
-            </li>
-            <li>
-                <img src="{{ url_for('static', filename='img/VisualSC.png')}}" width="25" height="25">
-                <a href="https://code.visualstudio.com/" target="_blank"> Visual<br>Studio Code</a>
-            </li>
-        </ul>
-    </div>  -->
+    <form action="/quitar" method="POST"  style="text-align: center" > 
+        <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="Delete" />
+    </form>
+     
 
 
 </body>

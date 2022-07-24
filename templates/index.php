@@ -30,48 +30,49 @@
 
 
 
-<div class="logo">
+<!-- <div class="logo">
     <img src="{{ url_for('static', filename='img/Logo.png' ) }}" alt="Logo Machine Learning" />
-</div>
+</div> -->
 
 
     <title>Machine Learning</title>
 </head>
-<body>
+
     <nav class="navbar navbar-expand-lg navbar-Info bg-color">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="{{ url_for('principal')}}">INDEX</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavInfoDropdown" aria-controls="navbarNavInfoDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavInfoDropdown">
-        <ul class="navbar-nav"> 
-            <a class="navbar-brand" href="{{ url_for('consulta')}}" >CONSULTA </a> 
-                <a class="navbar-brand" href="{{ url_for('subir_demencia')}}">SUBIR DEMENCIA</a> 
-        </ul>
+        <div class="container-fluid">           
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavInfoDropdown" aria-controls="navbarNavInfoDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavInfoDropdown">
+                    <ul class="navbar-nav"> 
+                        <a class="navbar-brand" href="{{ url_for('principal')}}">HOME</a>
+                        <a class="navbar-brand" href="{{ url_for('consulta')}}" >QUERY </a> 
+                        <a class="navbar-brand" href="{{ url_for('subir_demencia')}}">SUBIR DEMENCIA</a> 
+                    </ul>
+                </div>
+        </div>
+    </nav>
+    <body>    
+ 
+    <h1>DESCRIPTION OF THE PROJECT</h1> 
+ 
+    <div> 
+        <div class="cards">
+            <div class="card1"> 
+                MISIÓN
+            </div>
+            <div class="card2"> 
+            VISIÓN 
+            </div> 
         </div>
     </div>
-    </nav>
-    
- 
-    <h1>DESCRIPTION OF THE PROJECT</h1>
-<div id="abstract"> 
-    <div id="abstract1">
-
-
 
 
    </div>
 </div> 
+ 
 
-
-
-
-
-
-
-
-    <!-- <div class="sticky-container">
+    <div class="sticky-container">
         <ul class="sticky">
             <li>
             <i class="bi bi-github"></i>
@@ -101,13 +102,9 @@
                 <a href="https://code.visualstudio.com/" target="_blank"> Visual<br>Studio Code</a>
             </li>
         </ul>
-    </div>  -->
-
-
-
+    </div>  
  
-
-</body>
+</body> 
 
 
 <footer>

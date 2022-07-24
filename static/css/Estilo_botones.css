@@ -3,13 +3,13 @@
   margin:0px;
   position:fixed;
   left:-190px;
-  top:50%;
+  top:40%;
   width:221px;
   z-index: 1100;
 }
 .sticky li{
   list-style-type:none;
-  background-color: #212529;
+  background-color: #448bd1;
   color: white;
   height:40px;
   padding:0px;
