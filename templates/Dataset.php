@@ -24,7 +24,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 
 
-<title>QUERY</title>
+<title>DATASET ORIGINAL</title>
 </head> 
     <nav class="navbar navbar-expand-lg navbar-Info bg-color">
         <div class="container-fluid"> 
@@ -43,16 +43,20 @@
     </nav>
 
     <body> 
-
+    <h1>DATASET ORIGINAL</h1>
  
-<form action="       " method="POST" enctype="multipart/form-data" style="text-align: center;"> 
-        <h1>Enter your dementia query</h1>
-        <textarea name="" id="" cols="100" rows="8"  placeholder="Describe your query here..." style="resize:none;"></textarea> 
-        <br>
+    <!-- <div   class="formulario_subir"> 
+    <form action="/upload" method="POST" enctype="multipart/form-data" style="text-align: center"> 
+     <br>
+        <input class="form-control" id="upfile" type="file" name="upfile" accept=".csv" /> 
         <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="SEND" />
-        <input type="reset" id="send-signup" class="btn btn-dark" name="signup" value="RESET" />
     </form>
-<br>  
+    <br> 
+    <form action="/quitar" method="POST"  style="text-align: center" > 
+        <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="DELETE" />
+    </form>
+    </div>
+     -->
         
     
 

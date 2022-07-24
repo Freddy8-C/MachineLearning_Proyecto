@@ -14,8 +14,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Estilos.css' ) }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Estilo_botones.css')}}">
     <!-- SCRIPT -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
-    <title>UPLOAD</title> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>   
+    <!-- Tipo de letra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    
+    <title>UPLOAD DATASET</title> 
 </head>
     <nav class="navbar navbar-expand-lg navbar-Info bg-color">
         <div class="container-fluid">
@@ -27,16 +32,17 @@
                 <ul class="navbar-nav">
                     <a class="navbar-brand" href="{{ url_for('principal')}}">HOME</a> 
                     <a class="navbar-brand" href="{{ url_for('consulta')}}" >QUERY </a> 
-                    <a class="navbar-brand" href="{{ url_for('subir_demencia')}}">SUBIR DEMENCIA</a> 
+                    <a class="navbar-brand" href="{{ url_for('principal')}}">DATASET ORIGINAL</a> 
+                    <a class="navbar-brand" href="{{ url_for('subir_demencia')}}">UPLOAD DATASET</a> 
                 </ul>
             </div>
         </div>
     </nav>
 
 <body>
-    <h1>UPLOAD</h1>
+    <h1>UPLOAD DATASET</h1>
 
-
+<!-- 
     <div> 
         <div class="cards">
             <div class="card3"> 
@@ -49,18 +55,32 @@
             <strong> Important:  The dataset must be in excel format. CSV</strong>
             </div> 
         </div>
-    </div>
-<br>
+    </div> --> 
+    <div   class="formulario_subir"> 
     <form action="/upload" method="POST" enctype="multipart/form-data" style="text-align: center"> 
      <br>
         <input class="form-control" id="upfile" type="file" name="upfile" accept=".csv" /> 
-        <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="Send" />
+        <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="SEND" />
     </form>
-<br> 
+    <br> 
     <form action="/quitar" method="POST"  style="text-align: center" > 
-        <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="Delete" />
+        <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="DELETE" />
     </form>
-     
+    </div>
+    
+    
+    <div class="combo">
+        <form action="">
+            <label for="heads">CHOOSE A HEAD:</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>CHOOSE</option>
+                <option value="1">...</option>
+                <option value="2">...</option>
+                <option value="3">....</option>
+        </form>
+        </select>
+    </div>
+
 
 
 </body>
