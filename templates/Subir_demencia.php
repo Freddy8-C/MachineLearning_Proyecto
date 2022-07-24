@@ -45,12 +45,14 @@
             <br>
             Definition, Source (book or article where the definition was obtained), 
             Publisher, Approach (Biomedical, Psychosocial-Community or Daily).
+            <br>
+            <strong> Important:  The dataset must be in excel format. CSV</strong>
             </div> 
         </div>
     </div>
 <br>
     <form action="/upload" method="POST" enctype="multipart/form-data" style="text-align: center"> 
-     
+     <br>
         <input class="form-control" id="upfile" type="file" name="upfile" accept=".csv" /> 
         <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="Send" />
     </form>
