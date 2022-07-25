@@ -32,12 +32,12 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
             <div class="collapse navbar-collapse" id="navbarNavInfoDropdown">
-                <ul class="navbar-nav">
-                    <a class="navbar-brand" href="{{ url_for('principal')}}">HOME</a> 
-                    <a class="navbar-brand" href="{{ url_for('consulta')}}" >QUERY </a> 
-                    <a class="navbar-brand" href="{{ url_for('principal')}}">DATASET ORIGINAL</a> 
-                    <a class="navbar-brand" href="{{ url_for('subir_demencia')}}">UPLOAD DATASET</a> 
-                </ul>
+            <ul class="navbar-nav"> 
+            <a class="navbar-brand" href="{{ url_for('principal')}}">INDEX</a>
+                        <a class="navbar-brand" href="{{ url_for('consulta')}}" >CONSULTA</a> 
+                        <a class="navbar-brand" href="{{ url_for('original')}}">DATASET ORIGINAL</a> 
+                        <a class="navbar-brand" href="{{ url_for('demencia')}}">SUBIR DATASET</a> 
+                    </ul>
             </div>
         </div>
     </nav>
@@ -45,21 +45,7 @@
     <body> 
     <h1>DATASET ORIGINAL</h1>
  
-    <!-- <div   class="formulario_subir"> 
-    <form action="/upload" method="POST" enctype="multipart/form-data" style="text-align: center"> 
-     <br>
-        <input class="form-control" id="upfile" type="file" name="upfile" accept=".csv" /> 
-        <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="SEND" />
-    </form>
-    <br> 
-    <form action="/quitar" method="POST"  style="text-align: center" > 
-        <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="DELETE" />
-    </form>
-    </div>
-     -->
         
-    
-
     
     
     <div class="sticky-container">
@@ -93,18 +79,110 @@
             </li>
         </ul>
     </div> 
+    <h1>SIMILITUD DE JACCARD</h1>
+    <div class="jaccard">
 
+    </div>
+<div class=contenedor>
+<div class="tabla">
+    <div class="enfoques">
+    {% for i in range(4) %}
+    <div class="seccion">
+        {% if i ==0 %}
+            Enfoque
+        {% else %}
+            {{bolsa_enfoque[i-1]}}
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+        <table >
+           
+            <tr>
+            {% for i in range (30) %}
+                
+                  <td >
+                  DOC {{i+1}}
+                  </td>
+               
+               
+                {% endfor %}
+            </tr>
+            {% for i in matriz_jaccard %}
+            <tr>
+            
+                {%for j in range(30)%}
+                  
+                    <td >
+                        {{i[j]}} %
+                    </td>
+                    {% endfor %}
+              
+            </tr>
+            {% endfor %}
+           
+    </table>
+   
+    </div>
+</div>
+   
 
+<h1>SIMILITUD DE COSENO VECTORIAL</h1>
+<div class="coseno">
 
+</div>
+<div class=contenedor>
+<div class="tabla">
+    <div class="enfoques">
+    {% for i in range(4) %}
+    <div class="seccion">
+        {% if i ==0 %}
+            Enfoque
+        {% else %}
+            {{bolsa_enfoque[i-1]}}
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+        <table >
+           
+            <tr>
+            {% for i in range (30) %}
+                
+                  <td >
+                  DOC {{i+1}}
+                  </td>
+               
+               
+                {% endfor %}
+            </tr>
+            {% for i in lista_tf_idf %}
+            <tr>
+            
+                {%for j in range(30)%}
+                  
+                    <td >
+                        {{i[j]}} %
+                    </td>
+                    {% endfor %}
+              
+            </tr>
+            {% endfor %}
+           
+    </table>
+   
+    </div>
+</div>
 
     <!-- <script src="{{ url_for('static', filename='scripts/check.js' ) }}"> </script> -->
 
     </body>
 
 
-<footer>
+    <footer>
 <p>
-Elaborated by: Patricio Cadena - Freddy Camacho - Saskia Guerrero - Jefferson Sandoval <br> Students of the Salesian Polytechnic University.
+    <br><br>
+Elaborado por: Patricio Cadena - Freddy Camacho - Saskia Guerrero - Jefferson Sandoval <br> Estudiantes de la Universidad Politécnica Salesiana.
 </p>
 </footer>
 

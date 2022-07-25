@@ -47,10 +47,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavInfoDropdown">
                     <ul class="navbar-nav"> 
-                        <a class="navbar-brand" href="{{ url_for('principal')}}">HOME</a>
-                        <a class="navbar-brand" href="{{ url_for('consulta')}}" >QUERY </a> 
-                        <a class="navbar-brand" href="{{ url_for('principal')}}">DATASET ORIGINAL</a> 
-                        <a class="navbar-brand" href="{{ url_for('subir_demencia')}}">UPLOAD DATASET</a> 
+                        <a class="navbar-brand" href="{{ url_for('principal')}}">INDEX</a>
+                        <a class="navbar-brand" href="{{ url_for('consulta')}}" >CONSULTA</a> 
+                        <a class="navbar-brand" href="{{ url_for('original')}}">DATASET ORIGINAL</a> 
+                        <a class="navbar-brand" href="{{ url_for('demencia')}}">SUBIR DATASET</a> 
                     </ul>
                 </div>
         </div>
@@ -116,7 +116,8 @@
 
 <footer>
 <p>
-Elaborated by: Patricio Cadena - Freddy Camacho - Saskia Guerrero - Jefferson Sandoval <br> Students of the Salesian Polytechnic University.
+    <br>
+Elaborado por: Patricio Cadena - Freddy Camacho - Saskia Guerrero - Jefferson Sandoval <br> Estudiantes de la Universidad Politécnica Salesiana.
 </p>
 </footer>
 

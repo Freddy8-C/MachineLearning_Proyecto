@@ -33,10 +33,12 @@
                 </button>
             <div class="collapse navbar-collapse" id="navbarNavInfoDropdown">
                 <ul class="navbar-nav">
-                    <a class="navbar-brand" href="{{ url_for('principal')}}">HOME</a> 
-                    <a class="navbar-brand" href="{{ url_for('consulta')}}" >QUERY </a> 
-                    <a class="navbar-brand" href="{{ url_for('principal')}}">DATASET ORIGINAL</a> 
-                    <a class="navbar-brand" href="{{ url_for('subir_demencia')}}">UPLOAD DATASET</a> 
+                <ul class="navbar-nav"> 
+                <a class="navbar-brand" href="{{ url_for('principal')}}">INDEX</a>
+                        <a class="navbar-brand" href="{{ url_for('consulta')}}" >CONSULTA</a> 
+                        <a class="navbar-brand" href="{{ url_for('original')}}">DATASET ORIGINAL</a> 
+                        <a class="navbar-brand" href="{{ url_for('demencia')}}">SUBIR DATASET</a> 
+                    </ul>
                 </ul>
             </div>
         </div>
@@ -45,12 +47,12 @@
     <body> 
 
  
-<form action="       " method="POST" enctype="multipart/form-data" style="text-align: center;"> 
-        <h1>Enter your dementia query</h1>
-        <textarea name="" id="" cols="100" rows="8"  placeholder="Describe your query here..." style="resize:none;"></textarea> 
+<form action="" method="post" style="text-align: center;"> 
+        <h1>INGRESE TU DEFINICIÓN DE DEMENCIA</h1>
+        <textarea name="consulta" id="consulta" cols="100" rows="8"  placeholder="Describe tu definición aquí..." style="resize:none;"></textarea> 
         <br>
         <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="SEND" />
-        <input type="reset" id="send-signup" class="btn btn-dark" name="signup" value="RESET" />
+        <input type="reset" id="send-rest" class="btn btn-dark" name="rest" value="RESET" />
     </form>
 <br>  
         
@@ -89,8 +91,77 @@
             </li>
         </ul>
     </div> 
-
-
+    <div class="tabla2">
+        <table >
+            <tr>
+                <th  class="td_h" colspan="2" >
+                    SIMILITUD CON JACCARD
+                </th>
+            </tr>
+            <tr>
+            {% for i in range (2) %}
+                {% if i == 0%}
+                <td>
+                  ENFOQUE
+                  </td>
+                  {% else %}
+                  <td>
+                  DOCUMENTO
+                  </td>
+                {%endif%}
+               
+                {% endfor %}
+            </tr>
+            {% for i in range(tam_enfoque) %}
+            <tr>
+           
+                <td>
+                    {{bolsa_enfoque[i]}} 
+                </td>
+                <td>
+                    {{matriz_jaccard[i]}} %
+                </td>
+            
+            </tr>
+            {% endfor %}
+           
+    </table>
+    <table >
+            <tr>
+                <th  class="td_h" colspan="2" >
+                    SIMILITUD CON COSENO VECTORIAl
+                </th>
+            </tr>
+            <tr>
+            {% for i in range (2) %}
+                {% if i == 0%}
+                <td>
+                  ENFOQUE
+                  </td>
+                  {% else %}
+                  <td>
+                  DOCUMENTO 
+                  </td>
+                {%endif%}
+               
+                {% endfor %}
+            </tr>
+            {% for i in range(tam_enfoque) %}
+            <tr>
+           
+                <td>
+                    {{bolsa_enfoque[i]}} 
+                </td>
+                <td>
+                    {{lista_tf_idf[i]}} %
+                </td>
+            
+            </tr>
+            {% endfor %}
+           
+    </table>
+    </div>
+   
 
 
     <!-- <script src="{{ url_for('static', filename='scripts/check.js' ) }}"> </script> -->
@@ -98,9 +169,10 @@
     </body>
 
 
-<footer>
+    <footer>
 <p>
-Elaborated by: Patricio Cadena - Freddy Camacho - Saskia Guerrero - Jefferson Sandoval <br> Students of the Salesian Polytechnic University.
+    <br><br>
+Elaborado por: Patricio Cadena - Freddy Camacho - Saskia Guerrero - Jefferson Sandoval <br> Estudiantes de la Universidad Politécnica Salesiana.
 </p>
 </footer>
 

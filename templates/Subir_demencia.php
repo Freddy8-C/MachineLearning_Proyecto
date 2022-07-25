@@ -29,61 +29,44 @@
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavInfoDropdown">
-                <ul class="navbar-nav">
-                    <a class="navbar-brand" href="{{ url_for('principal')}}">HOME</a> 
-                    <a class="navbar-brand" href="{{ url_for('consulta')}}" >QUERY </a> 
-                    <a class="navbar-brand" href="{{ url_for('principal')}}">DATASET ORIGINAL</a> 
-                    <a class="navbar-brand" href="{{ url_for('subir_demencia')}}">UPLOAD DATASET</a> 
-                </ul>
+            <ul class="navbar-nav"> 
+            <a class="navbar-brand" href="{{ url_for('principal')}}">INDEX</a>
+                        <a class="navbar-brand" href="{{ url_for('consulta')}}" >CONSULTA</a> 
+                        <a class="navbar-brand" href="{{ url_for('original')}}">DATASET ORIGINAL</a> 
+                        <a class="navbar-brand" href="{{ url_for('demencia')}}">SUBIR DATASET</a> 
+                    </ul>
             </div>
         </div>
     </nav>
 
 <body>
     <h1>UPLOAD DATASET</h1>
-
-<!-- 
-    <div> 
-        <div class="cards">
-            <div class="card3"> 
-            Requirements to upload the dataset, which must take into account that it contains 
-            the fields:
-            <br>
-            Definition, Source (book or article where the definition was obtained), 
-            Publisher, Approach (Biomedical, Psychosocial-Community or Daily).
-            <br>
-            <strong> Important:  The dataset must be in excel format. CSV</strong>
-            </div> 
-        </div>
-    </div> --> 
     <div   class="formulario_subir"> 
     <form action="/upload" method="POST" enctype="multipart/form-data" style="text-align: center"> 
      <br>
         <input class="form-control" id="upfile" type="file" name="upfile" accept=".csv" /> 
-        <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="SEND" />
-    </form>
-    <br> 
-    <form action="/quitar" method="POST"  style="text-align: center" > 
-        <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="DELETE" />
-    </form>
-    </div>
     
+                <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="SEND" />
+   
+   <input type="reset" id="reset" class="btn btn-dark" name="signup" value="DELETE" />
+    </form>
+
+    <form action="/Subir_demencia.php" method="post" enctype="multipart/form-data" style="text-align: center"> 
+    <br>
+    <h2 for="heads">ELIGE LA COLUMNA:</h2>
+            <select name="combo" id="combo"class="form-select" aria-label="Default select example">
+                <option selected>ELIGE</option>
+               {%for i in lista%}
+               <option value="{{i}}">{{i}}</option>
+               {%endfor%}
+               <br>
+    <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="SEND" />
+
+</form>
     
-    <div class="combo">
-        <form action="">
-            <label for="heads">CHOOSE A HEAD:</label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>CHOOSE</option>
-                <option value="1">...</option>
-                <option value="2">...</option>
-                <option value="3">....</option>
-        </form>
-        </select>
-    </div>
-
-
-
-
+  
+</div>
+    
 
 
     <div class="sticky-container">
@@ -118,7 +101,108 @@
         </ul>
     </div> 
 
+    <h1>SIMILITUD DE JACCARD</h1>
+    <div class="jaccard">
 
+    </div>
+<div class=contenedor>
+<div class="tabla">
+    <div class="enfoques">
+    {% for i in range(4) %}
+    <div class="seccion">
+        {% if i ==0 %}
+            Enfoque
+        {% else %}
+            {{bolsa_enfoque[i-1]}}
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+        {% if act == 1 %}
+        <table >
+           
+           <tr>
+           {% for i in range (tamanio) %}
+               
+                 <td >
+                 DOC {{i+1}}
+                 </td>
+              
+              
+               {% endfor %}
+           </tr>
+           {% for i in matriz_jaccard %}
+           <tr>
+           
+               {%for j in range(tamanio)%}
+                 
+                   <td >
+                       {{i[j]}} %
+                   </td>
+                   {% endfor %}
+             
+           </tr>
+           {% endfor %}
+          
+   </table>
+    
+        {% endif %}
+       
+   
+    </div>
+</div>
+   
+
+<h1>SIMILITUD DE COSENO VECTORIAL</h1>
+<div class="coseno">
+
+</div>
+<div class=contenedor>
+<div class="tabla">
+    <div class="enfoques">
+    {% for i in range(4) %}
+    <div class="seccion">
+        {% if i ==0 %}
+            Enfoque
+        {% else %}
+            {{bolsa_enfoque[i-1]}}
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+        {% if act == 1 %}
+<table >
+           
+            <tr>
+            {% for i in range (tamanio) %}
+                
+                  <td >
+                  DOC {{i+1}}
+                  </td>
+               
+               
+                {% endfor %}
+            </tr>
+            {% for i in lista_tf_idf %}
+            <tr>
+            
+                {%for j in range(tamanio)%}
+                  
+                    <td >
+                        {{i[j]}} %
+                    </td>
+                    {% endfor %}
+              
+            </tr>
+            {% endfor %}
+           
+    </table>
+   
+        {% endif %}
+        
+   
+    </div>
+</div>
 
 
 
@@ -127,7 +211,8 @@
 
 <footer>
 <p>
-Elaborated by: Patricio Cadena - Freddy Camacho - Saskia Guerrero - Jefferson Sandoval <br> Students of the Salesian Polytechnic University.
+    <br><br>
+Elaborado por: Patricio Cadena - Freddy Camacho - Saskia Guerrero - Jefferson Sandoval <br> Estudiantes de la Universidad Politécnica Salesiana.
 </p>
 </footer>
 
