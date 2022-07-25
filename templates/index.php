@@ -62,14 +62,19 @@
     <div> 
         <div class="cards">
             <div class="card1"> 
-                MISIÓN
+                RESUMEN
                 <br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                El presente documento presentará una página web, donde se obtendrán diferentes conceptos de 
+                demencia al ingresar estos conceptos se indicará a que se orienta, en este caso existen tres
+                 tipos de orientaciones las cuales son las siguientes: biomédica, psicosocial-comunitaria y cotidiana. ; el usuario ingresa un concepto y este indicará que término es similar, además indicará el nivel de similitud entre la entrada y las taxonomías. Mediante el Jaccard y el coseno vectorial. Para que este sistema funcione correctamente se ha probado con definiciones externas de diferentes textos científicos, esto se hizo para que la herramienta funcione correctamente. La interfaz es amigable, muy intuitiva y fácil de navegar, ya que fue diseñada para todo tipo de usuarios.    
             </div>
             <div class="card2"> 
-            VISIÓN 
+                INTRODUCCIÓN 
                 <br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                El problema se debe a que en los últimos años ha existido niveles altos de demencia, por lo cual es bueno saber sobre lo que opinan los médicos y personas
+comunes, y saber su definición a que se encuentra orientada, la demencia no es una enfermedad específica, sino un grupo de trastornos caracterizados por el
+deterioro de, al menos, dos funciones cerebrales, como la memoria y la razón. Los síntomas incluyen olvidos, aptitudes sociales restringidas y razonamiento tan
+limitado que interfiere en las actividades diarias. Los medicamentos y la terapia pueden ayudar a controlar los síntomas. Algunas causas son reversibles.
             </div> 
         </div>
     </div>
@@ -83,26 +88,26 @@
         <ul class="sticky">
             <li>
             <i class="bi bi-github"></i>
-                <a href="https://github.com/Freddy8-C/MachineLearning_Proyecto" target="_blank">Repository<br>Project </a> 
+                <a href="https://github.com/Freddy8-C/MachineLearning_Proyecto" target="_blank">Repositorio<br>Project </a> 
             </li>
             <li>
             <i class="bi bi-git"></i>
-               <a href="https://github.com/Freddy8-C/Proyecto_MachineLearning2" target="_blank">Repository<br>CSV </a>
+               <a href="https://github.com/Freddy8-C/Proyecto_MachineLearning2" target="_blank">Repositorio<br>CSV </a>
             </li>
 
             <li>
             <i class="bi bi-globe"></i>
-                <a href="https://machinlearning2.herokuapp.com/" target="_blank">Website<br>Machine Learning</a>
+                <a href="https://demencia.herokuapp.com/" target="_blank">Página web<br>en heroku</a>
             </li> 
 
             <li>
                 <img src="{{ url_for('static', filename='img/Flask.png')}}" width="25" height="25">
-                <a href="https://flask.palletsprojects.com/en/2.1.x/installation/" target="_blank">Website<br>Flask</a>
+                <a href="https://flask.palletsprojects.com/en/2.1.x/installation/" target="_blank">Página web<br>Flask</a>
             </li>
 
             <li>
                 <img src="{{ url_for('static', filename='img/Heroku.png')}}" width="25" height="25">
-                <a href="https://www.heroku.com/" target="_blank">Website<br>Heroku</a>
+                <a href="https://www.heroku.com/" target="_blank">Página web<br>Heroku</a>
             </li>
             <li>
                 <img src="{{ url_for('static', filename='img/VisualSC.png')}}" width="25" height="25">
@@ -118,6 +123,7 @@
 <p>
     <br>
 Elaborado por: Patricio Cadena - Freddy Camacho - Saskia Guerrero - Jefferson Sandoval <br> Estudiantes de la Universidad Politécnica Salesiana.
+<br> Carrera Ingeniería en Ciencias de la Computación
 </p>
 </footer>
 

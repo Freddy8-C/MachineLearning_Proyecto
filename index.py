@@ -244,6 +244,8 @@ tam_enfoque = len(bolsa_enfoque)
 def consulta():
     global activador
     activador=0
+    global matriz
+    matriz = [0,0,0]
     return render_template("Consulta.php",activador=activador,tam_enfoque=tam_enfoque,bolsa_enfoque=bolsa_enfoque,matriz_jaccard=matriz[0],lista_tf_idf=matriz[1])
 
 link_bolsa = "https://raw.githubusercontent.com/Freddy8-C/Proyecto_MachineLearning2/master/BOLSA%20DE%20PALABRAS%203%20MODELOS%20PARA%20CATIA.csv?token=GHSAT0AAAAAABWHCJVIARVPDV22QAW7UQ3EYWZ7Z2A"

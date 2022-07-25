@@ -52,44 +52,46 @@
         <ul class="sticky">
             <li>
             <i class="bi bi-github"></i>
-                <a href="https://github.com/Freddy8-C/MachineLearning_Proyecto" target="_blank">Repository<br>Project </a> 
+                <a href="https://github.com/Freddy8-C/MachineLearning_Proyecto" target="_blank">Repositorio<br>Project </a> 
             </li>
             <li>
             <i class="bi bi-git"></i>
-               <a href="https://github.com/Freddy8-C/Proyecto_MachineLearning2" target="_blank">Repository<br>CSV </a>
+               <a href="https://github.com/Freddy8-C/Proyecto_MachineLearning2" target="_blank">Repositorio<br>CSV </a>
             </li>
 
             <li>
             <i class="bi bi-globe"></i>
-                <a href="https://machinlearning2.herokuapp.com/" target="_blank">Website<br>Machine Learning</a>
+                <a href="https://demencia.herokuapp.com/" target="_blank">Página web<br>en heroku</a>
             </li> 
 
             <li>
                 <img src="{{ url_for('static', filename='img/Flask.png')}}" width="25" height="25">
-                <a href="https://flask.palletsprojects.com/en/2.1.x/installation/" target="_blank">Website<br>Flask</a>
+                <a href="https://flask.palletsprojects.com/en/2.1.x/installation/" target="_blank">Página web<br>Flask</a>
             </li>
 
             <li>
                 <img src="{{ url_for('static', filename='img/Heroku.png')}}" width="25" height="25">
-                <a href="https://www.heroku.com/" target="_blank">Website<br>Heroku</a>
+                <a href="https://www.heroku.com/" target="_blank">Página web<br>Heroku</a>
             </li>
             <li>
                 <img src="{{ url_for('static', filename='img/VisualSC.png')}}" width="25" height="25">
                 <a href="https://code.visualstudio.com/" target="_blank"> Visual<br>Studio Code</a>
             </li>
         </ul>
-    </div> 
-    <h1>SIMILITUD DE JACCARD</h1>
-    <div class="jaccard">
+    </div>  
 
-    </div>
+
+
+
+    <h1>SIMILITUD DE JACCARD</h1>
+  
 <div class=contenedor>
 <div class="tabla">
     <div class="enfoques">
     {% for i in range(4) %}
     <div class="seccion">
         {% if i ==0 %}
-            Enfoque
+            ENFOQUES
         {% else %}
             {{bolsa_enfoque[i-1]}}
         {% endif %}
@@ -113,7 +115,7 @@
             
                 {%for j in range(30)%}
                   
-                    <td >
+                    <td  >
                         {{i[j]}} %
                     </td>
                     {% endfor %}
@@ -128,9 +130,7 @@
    
 
 <h1>SIMILITUD DE COSENO VECTORIAL</h1>
-<div class="coseno">
 
-</div>
 <div class=contenedor>
 <div class="tabla">
     <div class="enfoques">
@@ -161,7 +161,7 @@
             
                 {%for j in range(30)%}
                   
-                    <td >
+                    <td id="" >
                         {{i[j]}} %
                     </td>
                     {% endfor %}
@@ -174,16 +174,15 @@
     </div>
 </div>
 
-    <!-- <script src="{{ url_for('static', filename='scripts/check.js' ) }}"> </script> -->
 
     </body>
 
 
     <footer>
 <p>
-    <br><br>
+    <br> 
 Elaborado por: Patricio Cadena - Freddy Camacho - Saskia Guerrero - Jefferson Sandoval <br> Estudiantes de la Universidad Politécnica Salesiana.
-</p>
+</p> 
 </footer>
 
 </html>

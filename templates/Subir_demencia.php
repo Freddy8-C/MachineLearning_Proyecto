@@ -40,15 +40,15 @@
     </nav>
 
 <body>
-    <h1>UPLOAD DATASET</h1>
+    <h1>SUBIR DATASET</h1>
     <div   class="formulario_subir"> 
     <form action="/upload" method="POST" enctype="multipart/form-data" style="text-align: center"> 
      <br>
         <input class="form-control" id="upfile" type="file" name="upfile" accept=".csv" /> 
     
-                <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="SEND" />
+                <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="SUBIR" />
    
-   <input type="reset" id="reset" class="btn btn-dark" name="signup" value="DELETE" />
+   <input type="reset" id="reset" class="btn btn-dark" name="signup" value="ELIMINAR" />
     </form>
 
     <form action="/Subir_demencia.php" method="post" enctype="multipart/form-data" style="text-align: center"> 
@@ -60,7 +60,7 @@
                <option value="{{i}}">{{i}}</option>
                {%endfor%}
                <br>
-    <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="SEND" />
+    <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="ENVIAR COLUMNA" />
 
 </form>
     
@@ -69,42 +69,44 @@
     
 
 
-    <div class="sticky-container">
+<div class="sticky-container">
         <ul class="sticky">
-        <li>
+            <li>
             <i class="bi bi-github"></i>
-                <a href="https://github.com/Freddy8-C/MachineLearning_Proyecto" target="_blank">Repository<br>Project </a> 
+                <a href="https://github.com/Freddy8-C/MachineLearning_Proyecto" target="_blank">Repositorio<br>Project </a> 
             </li>
             <li>
             <i class="bi bi-git"></i>
-               <a href="https://github.com/Freddy8-C/Proyecto_MachineLearning2" target="_blank">Repository<br>CSV </a>
+               <a href="https://github.com/Freddy8-C/Proyecto_MachineLearning2" target="_blank">Repositorio<br>CSV </a>
             </li>
 
             <li>
             <i class="bi bi-globe"></i>
-                <a href="https://machinlearning2.herokuapp.com/" target="_blank">Website<br>Machine Learning</a>
+                <a href="https://demencia.herokuapp.com/" target="_blank">Página web<br>en heroku</a>
             </li> 
 
             <li>
                 <img src="{{ url_for('static', filename='img/Flask.png')}}" width="25" height="25">
-                <a href="https://flask.palletsprojects.com/en/2.1.x/installation/" target="_blank">Website<br>Flask</a>
+                <a href="https://flask.palletsprojects.com/en/2.1.x/installation/" target="_blank">Página web<br>Flask</a>
             </li>
 
             <li>
                 <img src="{{ url_for('static', filename='img/Heroku.png')}}" width="25" height="25">
-                <a href="https://www.heroku.com/" target="_blank">Website<br>Heroku</a>
+                <a href="https://www.heroku.com/" target="_blank">Página web<br>Heroku</a>
             </li>
             <li>
                 <img src="{{ url_for('static', filename='img/VisualSC.png')}}" width="25" height="25">
                 <a href="https://code.visualstudio.com/" target="_blank"> Visual<br>Studio Code</a>
             </li>
         </ul>
-    </div> 
+    </div>  
 
+
+
+
+    {% if act == 1 %}
     <h1>SIMILITUD DE JACCARD</h1>
-    <div class="jaccard">
 
-    </div>
 <div class=contenedor>
 <div class="tabla">
     <div class="enfoques">
@@ -151,12 +153,10 @@
    
     </div>
 </div>
-   
-
+{% endif %}
+{% if act == 1 %}
 <h1>SIMILITUD DE COSENO VECTORIAL</h1>
-<div class="coseno">
 
-</div>
 <div class=contenedor>
 <div class="tabla">
     <div class="enfoques">
@@ -203,7 +203,7 @@
    
     </div>
 </div>
-
+{% endif %}
 
 
 </body>
@@ -211,7 +211,7 @@
 
 <footer>
 <p>
-    <br><br>
+    <br> 
 Elaborado por: Patricio Cadena - Freddy Camacho - Saskia Guerrero - Jefferson Sandoval <br> Estudiantes de la Universidad Politécnica Salesiana.
 </p>
 </footer>

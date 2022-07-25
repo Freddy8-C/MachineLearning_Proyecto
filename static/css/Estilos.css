@@ -165,17 +165,17 @@ html {
   body {
     margin: 0; 
     width: 100%; 
-    background-size: 100% 90%;
+    background-size: 100% 100%;
     background-image: url('../img/Logo.png');
     background-repeat: no-repeat;  
   }
 
 footer {
-    margin-top: 1%;
+    /* margin-top: 1%; */
     background-color: #448bd1;
     bottom: 0;
     width: 100%;
-    height: 7vw;
+    height: 10%;
     color: black;
     font-family: 'Kanit', sans-serif;
     
@@ -563,6 +563,8 @@ input[type="button"] {
   align-items: center;
   background-color: #58B4D7;
   font-size: 1vw;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
  }
 .tabla{
   width: 190vw;
@@ -594,6 +596,8 @@ input[type="button"] {
 
 th, td {
   font-size: 1.5vw;
+  font-family: 'Kanit', sans-serif;
+  text-align: center;
   border: 1px solid black;
   background-color: #FFF7F6;
   /*word-wrap: break-word;*/
@@ -625,14 +629,27 @@ th, td {
   background-color: #58B4D7;
 }
 
-.jaccard{
+.jaccardO{
   width: 100%;
   height: 5vw;
   background-color: aliceblue;
 }
 
-.coseno{
+.cosenoO{
   width: 100%;
   height: 5vw;
   background-color: aliceblue;
+}
+
+
+.auron{
+      position: relative;
+      width: 20%;
+      height: 17vw;
+      float: right;
+}
+
+.auron img{
+  height: 100%;
+  width: 100%;
 }

@@ -45,14 +45,15 @@
     </nav>
 
     <body> 
-
- 
+ <div  class="auron">
+ <img src="{{ url_for('static', filename='img/crazy-auron.gif' ) }}" alt="Demencia" />
+ </div>
 <form action="" method="post" style="text-align: center;"> 
         <h1>INGRESE TU DEFINICIÓN DE DEMENCIA</h1>
         <textarea name="consulta" id="consulta" cols="100" rows="8"  placeholder="Describe tu definición aquí..." style="resize:none;"></textarea> 
         <br>
-        <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="SEND" />
-        <input type="reset" id="send-rest" class="btn btn-dark" name="rest" value="RESET" />
+        <input type="submit" id="send-signup" class="btn btn-dark" name="signup" value="ENVIAR" />
+        <!-- <input type="reset" id="send-rest" class="btn btn-dark" name="rest" value="RESTABLECER" /> -->
     </form>
 <br>  
         
@@ -60,38 +61,42 @@
 
     
     
-    <div class="sticky-container">
+<div class="sticky-container">
         <ul class="sticky">
-        <li>
+            <li>
             <i class="bi bi-github"></i>
-                <a href="https://github.com/Freddy8-C/MachineLearning_Proyecto" target="_blank">Repository<br>Project </a> 
+                <a href="https://github.com/Freddy8-C/MachineLearning_Proyecto" target="_blank">Repositorio<br>Project </a> 
             </li>
             <li>
             <i class="bi bi-git"></i>
-               <a href="https://github.com/Freddy8-C/Proyecto_MachineLearning2" target="_blank">Repository<br>CSV </a>
+               <a href="https://github.com/Freddy8-C/Proyecto_MachineLearning2" target="_blank">Repositorio<br>CSV </a>
             </li>
 
             <li>
             <i class="bi bi-globe"></i>
-                <a href="https://machinlearning2.herokuapp.com/" target="_blank">Website<br>Machine Learning</a>
+                <a href="https://demencia.herokuapp.com/" target="_blank">Página web<br>en heroku</a>
             </li> 
 
             <li>
                 <img src="{{ url_for('static', filename='img/Flask.png')}}" width="25" height="25">
-                <a href="https://flask.palletsprojects.com/en/2.1.x/installation/" target="_blank">Website<br>Flask</a>
+                <a href="https://flask.palletsprojects.com/en/2.1.x/installation/" target="_blank">Página web<br>Flask</a>
             </li>
 
             <li>
                 <img src="{{ url_for('static', filename='img/Heroku.png')}}" width="25" height="25">
-                <a href="https://www.heroku.com/" target="_blank">Website<br>Heroku</a>
+                <a href="https://www.heroku.com/" target="_blank">Página web<br>Heroku</a>
             </li>
             <li>
                 <img src="{{ url_for('static', filename='img/VisualSC.png')}}" width="25" height="25">
                 <a href="https://code.visualstudio.com/" target="_blank"> Visual<br>Studio Code</a>
             </li>
         </ul>
-    </div> 
-    <div class="tabla2">
+    </div>  
+
+
+
+    
+    <div class="tabla2" id="cont">
         <table >
             <tr>
                 <th  class="td_h" colspan="2" >
@@ -164,14 +169,13 @@
    
 
 
-    <!-- <script src="{{ url_for('static', filename='scripts/check.js' ) }}"> </script> -->
 
     </body>
 
 
     <footer>
 <p>
-    <br><br>
+    <br> 
 Elaborado por: Patricio Cadena - Freddy Camacho - Saskia Guerrero - Jefferson Sandoval <br> Estudiantes de la Universidad Politécnica Salesiana.
 </p>
 </footer>
